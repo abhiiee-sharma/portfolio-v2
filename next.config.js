@@ -43,6 +43,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  output: 'export', // Enables static export
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio-v2' : '', // Replace with your repo name
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio-v2/' : '', // For assets
 };
 
 module.exports = nextConfig;
